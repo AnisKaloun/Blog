@@ -17,7 +17,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b69894d-998b-4262-9b6e-0236ec412985" name="Default Changelist" comment="Start of the project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +189,7 @@
       <workItem from="1604585657869" duration="5711000" />
       <workItem from="1608565614993" duration="5466000" />
       <workItem from="1608646828288" duration="6922000" />
-      <workItem from="1608676167993" duration="3936000" />
+      <workItem from="1608676167993" duration="4156000" />
     </task>
     <task id="LOCAL-00001" summary="Start of the project">
       <created>1604593917413</created>
@@ -206,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608650465355</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Procfile corrected">
+      <created>1608683452735</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1608683452735</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +245,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start of the project" />
     <MESSAGE value="Blog Controller create (Page d'acceuil et idPost)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Blog Controller create (Page d'acceuil et idPost)" />
+    <MESSAGE value="Procfile corrected" />
+    <option name="LAST_COMMIT_MESSAGE" value="Procfile corrected" />
   </component>
   <component name="WindowStateProjectService">
     <state x="459" y="276" key="ComposerInitDialogKey" timestamp="1608682056527">
