@@ -17,9 +17,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b69894d-998b-4262-9b6e-0236ec412985" name="Default Changelist" comment="Start of the project">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +190,7 @@
       <workItem from="1604585657869" duration="5711000" />
       <workItem from="1608565614993" duration="5466000" />
       <workItem from="1608646828288" duration="6922000" />
-      <workItem from="1608676167993" duration="3332000" />
+      <workItem from="1608676167993" duration="3936000" />
     </task>
     <task id="LOCAL-00001" summary="Start of the project">
       <created>1604593917413</created>
