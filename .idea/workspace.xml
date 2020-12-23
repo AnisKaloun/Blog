@@ -17,14 +17,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b69894d-998b-4262-9b6e-0236ec412985" name="Default Changelist" comment="Start of the project">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/prod/monolog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +28,9 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution />
+    <execution>
+      <executable path="composer" />
+    </execution>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -177,6 +174,12 @@
       <recent name="C:\Users\kalou\Blog\templates\blog" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml.dist" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -188,7 +191,7 @@
       <workItem from="1604585657869" duration="5711000" />
       <workItem from="1608565614993" duration="5466000" />
       <workItem from="1608646828288" duration="6922000" />
-      <workItem from="1608676167993" duration="939000" />
+      <workItem from="1608676167993" duration="3332000" />
     </task>
     <task id="LOCAL-00001" summary="Start of the project">
       <created>1604593917413</created>
@@ -240,6 +243,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Blog Controller create (Page d'acceuil et idPost)" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="459" y="276" key="ComposerInitDialogKey" timestamp="1608682056527">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="459" y="276" key="ComposerInitDialogKey/0.0.1366.728@0.0.1366.728" timestamp="1608682056527" />
     <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1604593967249">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
