@@ -7,6 +7,6 @@
         <h1>{{ post.title }}</h1>
         <p>{{post.content}}</p>
         {% set foo = post.getUrlAlias() %}
-        <a href="/post/{{foo}}">Lire</a>
+        <a href="/posts/{{foo}}">Lire</a>
     {% endfor %}
 {% endblock %}

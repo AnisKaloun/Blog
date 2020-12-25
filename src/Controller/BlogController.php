@@ -25,7 +25,7 @@ class BlogController extends AbstractController
     }
 
     /**
-     * @Route("/post/{url_alias}", name="Articlepost")
+     * @Route("/posts/{url_alias}", name="Articlepost")
      */
     public function post(Post $post): Response
     {
