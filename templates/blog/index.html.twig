@@ -3,5 +3,10 @@
 {% block title %}HomePage{% endblock %}
 
 {% block body %}
-<p>{{ message }}</p>
+    {% for post in Posts %}
+        <h1>{{ post.title }}</h1>
+        <p>{{post.content}}</p>
+        {% set foo = post.getUrlAlias() %}
+        <a href="/post/{{foo}}">Lire</a>
+    {% endfor %}
 {% endblock %}
