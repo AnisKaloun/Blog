@@ -7,22 +7,31 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 class ApiPostController extends AbstractController
 {
     /**
      * @Route("/api/post", name="api_post")
      */
-    public function index(): Response
+    public function index(HttpClientInterface $client): Response
     {
+
+        $response = $client->request(
+            'GET',
+            'http://medouaz-blog.herokuapp.com/api/posts'
+        );
+        $content = $response->getContent();
+        // $content = '{"id":521583, "name":"symfony-docs", ...}'
+        $content = $response->toArray();
         return $this->render('api_post/index.html.twig', [
-            'controller_name' => 'ApiPostController',
+            'Posts' => $content
         ]);
     }
 
     /**
      * @Route("/api/posts", name="api_posts",  methods={"GET"})
      */
-    public function getAll(PostRepository $postRepository): JsonResponse
+    public function sendPosts(PostRepository $postRepository): JsonResponse
     {
         $posts = $postRepository->findFirst5OrderedByPublishedTime();
         $data = [];
@@ -38,4 +47,5 @@ class ApiPostController extends AbstractController
 
         return new JsonResponse($data, Response::HTTP_OK);
     }
+
 }
