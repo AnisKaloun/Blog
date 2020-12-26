@@ -24,9 +24,8 @@ class ApiPostController extends AbstractController
      */
     public function getAll(PostRepository $postRepository): JsonResponse
     {
-        $posts = $postRepository->findAll();
+        $posts = $postRepository->findFirst5OrderedByPublishedTime();
         $data = [];
-
         foreach ($posts as $post) {
             $data[] = [
                 'id' => $post->getId(),

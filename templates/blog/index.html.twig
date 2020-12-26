@@ -9,4 +9,5 @@
         {% set foo = post.getUrlAlias() %}
         <a href="/posts/{{foo}}">Lire</a>
     {% endfor %}
+    {{ knp_pagination_render(Posts) }}
 {% endblock %}

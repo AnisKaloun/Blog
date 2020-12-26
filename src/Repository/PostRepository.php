@@ -47,4 +47,26 @@ class PostRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function findAllOrderedByPublishedTime() : array
+    {
+        $qb = $this->createQueryBuilder('p')
+            ->orderBy('p.published', 'DESC');
+
+        $query = $qb->getQuery();
+        return $query->getResult();
+
+    }
+
+    public function findFirst5OrderedByPublishedTime() : array
+    {
+        $qb = $this->createQueryBuilder('p')
+            ->orderBy('p.published', 'DESC')
+            ->setMaxResults(5);
+
+        $query = $qb->getQuery();
+        return $query->getResult();
+
+    }
+
 }
