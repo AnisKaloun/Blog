@@ -4,6 +4,10 @@ namespace App\Entity;
 
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
+
+
 
 /**
  * @ORM\Entity(repositoryClass=PostRepository::class)
@@ -23,7 +27,8 @@ class Post
     private $title;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @Gedmo\Slug(fields={"title"})
+     * @ORM\Column(type="string", unique=true)
      */
     private $url_alias;
 
@@ -33,6 +38,9 @@ class Post
     private $content;
 
     /**
+     * @var \DateTime $published
+     *
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(type="datetime")
      */
     private $published;
@@ -59,12 +67,6 @@ class Post
         return $this->url_alias;
     }
 
-    public function setUrlAlias(string $url_alias): self
-    {
-        $this->url_alias = $url_alias;
-
-        return $this;
-    }
 
     public function getContent(): ?string
     {
@@ -83,10 +85,5 @@ class Post
         return $this->published;
     }
 
-    public function setPublished(\DateTimeInterface $published): self
-    {
-        $this->published = $published;
 
-        return $this;
-    }
 }

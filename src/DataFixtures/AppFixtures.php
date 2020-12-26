@@ -17,10 +17,9 @@ class AppFixtures extends Fixture
         for($i=0;$i<15;$i++)
         {
             $post=new Post();
-            $post->setTitle($faker->sentence($nbWords=5, $variableNbWords = true))
-                ->setContent($faker->text($maxNbChars = 10000))
-                ->setPublished($faker->dateTime($max = 'now', $timezone = null))
-                ->setUrlAlias($faker->slug);
+            $title=$faker->sentence($nbWords=5, $variableNbWords = true);
+            $post->setTitle($title)
+                ->setContent($faker->text($maxNbChars = 10000));
 
             $manager->persist($post);
         }
