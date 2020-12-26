@@ -23,7 +23,6 @@ class ApiPostController extends AbstractController
             'http://medouaz-blog.herokuapp.com/api/posts'
         );
         $content = $response->getContent();
-        // $content = '{"id":521583, "name":"symfony-docs", ...}'
         $content = $response->toArray();
         return $this->render('api_post/index.html.twig', [
             'Posts' => $content
