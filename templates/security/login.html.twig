@@ -2,8 +2,10 @@
 
 {% block title %}Log in!{% endblock %}
 
+
 {% block body %}
-<form method="post">
+<body style="background-color: #f8f6f2;">
+<form method="post" >
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -14,15 +16,22 @@
         </div>
     {% endif %}
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
-    <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" required>
+    <div style=" margin-left: auto; margin-right: auto; width: 6em; margin-top: 170px; text-align: center; margin-bottom: 10px; width: 500px; height: 250px; background: rgba(0,0,0,0.3); border: none; outline: none; padding: 10px;">
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
+    <h1 style="color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; ">Login</h1>
+
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus style="width: 100%;
+	margin-bottom: 10px; background: rgba(0,0,0,0.3); border: none; outline: none; padding: 10px; font-size: 13px; color: #fff; text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3); border-radius: 4px; box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease; -moz-transition: box-shadow .5s ease; -o-transition: box-shadow .5s ease; -ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;">
+
+    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required style="width: 100%;
+	margin-bottom: 10px; background: rgba(0,0,0,0.3); border: none; outline: none; padding: 10px; font-size: 13px; color: #fff; text-shadow: 1px 1px 1px rgba(0,0,0,0.3); border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px; box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2); -webkit-transition: box-shadow .5s ease; -moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease; -ms-transition: box-shadow .5s ease; transition: box-shadow .5s ease;">
+
+    <input type="hidden" name="_csrf_token"  value="{{ csrf_token('authenticate') }}">
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -35,8 +44,12 @@
         </div>
     #}
 
+
     <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
+        Let me in
     </button>
+
+    </div>
 </form>
+</body>
 {% endblock %}
