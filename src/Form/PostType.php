@@ -13,9 +13,8 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('url_alias')
             ->add('content')
-            ->add('published')
+
         ;
     }
 
