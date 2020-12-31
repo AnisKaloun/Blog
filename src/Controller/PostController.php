@@ -8,6 +8,8 @@ use App\Repository\PostRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Psr\Log\LoggerInterface;
+
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -61,14 +63,15 @@ class PostController extends AbstractController
     /**
      * @Route("/{id}/edit", name="post_edit", methods={"GET","POST"})
      */
-    public function edit(Request $request, Post $post): Response
+    public function edit(Request $request, Post $post,LoggerInterface $logger): Response
     {
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
-        console.log("je suis là");
+        $logger->info('je suis dans le edit');
         if ($form->isSubmitted() && $form->isValid()) {
-            console.log("je rentre ");
+            $logger->info('je suis dans la validation');
+
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('post_index');
