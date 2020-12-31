@@ -22,10 +22,10 @@
         <div class="col-md-4" style="margin-bottom: 35px;">
 
             <div class="card border-success mb-3" style="max-width: 25rem; max-height: 30rem;">
-                <div class="card-header bg-transparent"> Titre: {{ post.title }}</div>
+                <div class="card-header bg-transparent"> <h6> Titre: {{ post.title }}</h6></div>
                 <div class="card-body text-success" style="overflow: hidden;">
                     <h5 class="card-title">urlAlias: {{ post.urlAlias }} </h5>
-                    <h6 class="card-subtitle mb-2 text-muted">ID: {{ post.id }} et la date de publication: {{ post.published ? post.published|date('Y-m-d H:i:s') : '' }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted">ID: {{ post.id }}   et la date de publication: {{ post.published ? post.published|date('Y-m-d H:i:s') : '' }}</h6>
                     <article  class="card-text" style=" overflow: hidden;font-family: 'Bitstream Charter',Georgia,serif; font-size:16px;line-height:1.4;color: #444;">
                         {{ post.content }}
                     </article>

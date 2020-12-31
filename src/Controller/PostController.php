@@ -66,7 +66,9 @@ class PostController extends AbstractController
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
+        console.log("je suis là");
         if ($form->isSubmitted() && $form->isValid()) {
+            console.log("je rentre ");
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('post_index');
