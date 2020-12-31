@@ -27,7 +27,7 @@
     </div>
    <div style="margin-bottom: 10px;  margin-left: auto; margin-right: auto; width: 6em; color: #444444">{{ knp_pagination_render(Posts) }}</div>
 
-    <footer style="background-color: #444444; height: 170px; margin-top: 30px;" >
+    <footer style="background-color: #e3e2c4; height: 220px; margin-top: 30px;" >
                <p style="text-align: center; padding-top: 30px">Suivez nous sur les médias sociaux</p>
 
         <div class="resauxS" style=" text-align: center">
@@ -35,6 +35,14 @@
         <a href="https://twitter.com/">  <img src="{{ asset("ressources/twitter.png") }}"  alt="twitter"/></a>
         <a href="https://www.instagram.com/"> <img src="{{ asset("ressources/instagram.png") }}"  alt="instagram"/></a>
         </div>
+
+<div style="float: right; padding-right: 5px; padding-left: 40px">
+    <figure class="figure">
+        <a style="float: right;" href={{ path('api_post') }}> <img src="{{ asset("ressources/flechePP.png") }}"  alt="autreArticles"/></a>
+        <figcaption class="figure-caption">Les articles de nos cammarades</figcaption>
+    </figure>
+
+</div>
     </footer>
 {% endblock %}
 
