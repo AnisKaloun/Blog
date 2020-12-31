@@ -71,9 +71,7 @@ class PostController extends AbstractController
         $logger->info('je suis dans le edit');
         if ($form->isSubmitted() && $form->isValid()) {
             $logger->info('je suis dans la validation');
-
             $this->getDoctrine()->getManager()->flush();
-
             return $this->redirectToRoute('post_index');
         }
 
